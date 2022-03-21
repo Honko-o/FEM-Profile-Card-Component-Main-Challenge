@@ -1,0 +1,141 @@
+/*
+    Prefixer Mixin
+    Mixin to add Vendor Prefixes to CSS Properties
+*/
+/*
+    Overlay Mixin
+    Mixin To add Basic Overlay properties
+*/
+/* 
+    Flexbox Mixin
+    Mixin To Apply Flexbox Properties
+*/
+html {
+  overflow: hidden;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  background-color: #19a2ae;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+}
+body::before {
+  content: url(../../images/bg-pattern-bottom.svg);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-2%, -5%);
+  z-index: -1;
+}
+body::after {
+  content: url("../../images/bg-pattern-top.svg");
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  transform: translate(2%, 5%);
+  z-index: -1;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 18px;
+}
+
+.card {
+  background-color: white;
+  text-align: center;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 0 25px;
+  margin-top: -35px;
+}
+.card .image-wrapper img {
+  display: block;
+  max-width: 100%;
+}
+.card .card-info-wrapper {
+  position: relative;
+  padding-top: 70px;
+}
+.card .card-person-info .name {
+  width: fit-content;
+  margin: 0 auto 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: "Kumbh Sans", sans-serif;
+  color: #2d3248;
+  margin-top: 0;
+  position: relative;
+}
+.card .card-person-info .name:before {
+  content: "26";
+  position: absolute;
+  right: -30px;
+  top: 0;
+  font-weight: 400;
+  color: #6a6f81;
+}
+.card .card-person-info .country {
+  font-family: "Kumbh Sans", sans-serif;
+  color: #6a6f81;
+  font-weight: 400;
+  margin: 0 0 30px;
+}
+.card .card-person-stats {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  border-top: 1px solid rgba(150, 150, 150, 0.5);
+}
+.card .card-person-stats .stat {
+  font-family: "Kumbh Sans", sans-serif;
+}
+.card .card-person-stats .stat h2,
+.card .card-person-stats .stat p {
+  margin: 0;
+}
+.card .card-person-stats .stat h2 {
+  color: #2d3248;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+.card .card-person-stats .stat p {
+  font-size: 0.7rem;
+  color: #6a6f81;
+  letter-spacing: 2px;
+}
+.card .avatar-image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
+/*# sourceMappingURL=main.css.map */

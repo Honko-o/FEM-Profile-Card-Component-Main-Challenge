@@ -1,0 +1,80 @@
+@use '../core/' as *;
+
+.card {
+    background-color: white;
+    text-align: center;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 0 25px;
+    margin-top: -35px;
+    .image-wrapper {
+        img {
+            display: block;
+            max-width: 100%;
+        }
+    }
+    .card-info-wrapper {
+        position: relative;
+        padding-top: 70px;
+    }
+    .card-person-info {
+        .name {
+            width: fit-content;
+            margin: 0 auto 10px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            font-family: 'Kumbh Sans', sans-serif;
+            color: $primary-blue-900;
+            margin-top: 0;
+            position: relative;
+            &:before {
+                content: '26';
+                position: absolute;
+                right: -30px;
+                top: 0;            
+                font-weight: 400;
+                color: $primary-gray-blue;
+            }
+        }
+        .country {
+            font-family: 'Kumbh Sans', sans-serif;
+            color: $primary-gray-blue;
+            font-weight: 400;
+            margin: 0 0 30px;
+        }
+    }
+    .card-person-stats {
+        position: relative;
+        @include flex(space-around, center);
+        padding: 20px;
+        border-top: 1px solid transparentize($dark-gray, 0.5);
+        .stat {
+            font-family: 'Kumbh Sans', sans-serif;
+            h2,
+            p {
+                margin: 0;
+            }
+            h2 {
+                color: $primary-blue-900;
+                font-size: 1.1rem;
+                margin-bottom: 5px;
+            }
+            p {
+                font-size: 0.7rem;
+                color: $primary-gray-blue;
+                letter-spacing: 2px;
+            }
+        }
+    }
+    .avatar-image {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        border: 5px solid white;
+    }
+}
+
+
+
